@@ -1,0 +1,71 @@
+cmake_minimum_required(VERSION 3.5)
+
+find_program(CMAKE_CXX_COMPILER NAMES g++)
+
+if(CMAKE_CXX_COMPILER)
+  message(STATUS "Found g++ compiler: ${CMAKE_CXX_COMPILER}")
+else()
+  message(FATAL_ERROR "Could not find g++ compiler")
+  exit()
+endif()
+
+project(Tests VERSION 1.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS --coverage)
+set(CMAKE_EXE_LINKER_FLAGS --coverage)
+set(QT_LIBS Gui)
+set(COVERAGE_EXTRACT_FILES "*Filter.cc")
+
+include_directories(../model/ ../common/)
+file(GLOB TEST_SOURCES "*.cc" "../model/Filter.cc")
+
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS ${QT_LIBS})
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${QT_LIBS})
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG release-1.12.1
+)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+add_executable(${PROJECT_NAME} ${TEST_SOURCES})
+
+qt_add_resources(${PROJECT_NAME} "img"
+  PREFIX "/"
+  BASE "../../misc/images"
+  FILES
+  ../../misc/images/sample.png
+  ../../misc/images/sample-ebmoss.png
+  ../../misc/images/sample-sharpen.png
+  ../../misc/images/sample-outline.png
+  ../../misc/images/sample-outline.png
+  ../../misc/images/sample-box-blur.png
+  ../../misc/images/sample-negative.png
+  ../../misc/images/sample-bw-average.png
+  ../../misc/images/sample-sobel-left.png
+  ../../misc/images/sample-sobel-right.png
+  ../../misc/images/sample-gaussian-blur.png
+  ../../misc/images/sample-sobel-left-and-right.png
+)
+
+foreach(i ${QT_LIBS})
+  target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::${i})
+endforeach()
+
+target_link_libraries(${PROJECT_NAME} PRIVATE GTest::gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(${PROJECT_NAME})
+
+add_custom_target(coverage
+  COMMAND lcov --directory . --capture --output-file coverage.info
+  COMMAND lcov --extract coverage.info ${COVERAGE_EXTRACT_FILES} --output-file coverage.info
+  COMMAND genhtml coverage.info --output-directory report
+)
