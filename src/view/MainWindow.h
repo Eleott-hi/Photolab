@@ -1,5 +1,5 @@
-#ifndef CPP8_SRC_VIEW_MAIN_WINDOW_H_
-#define CPP8_SRC_VIEW_MAIN_WINDOW_H_
+#ifndef SRC_VIEW_MAIN_WINDOW_H_
+#define SRC_VIEW_MAIN_WINDOW_H_
 
 #include <QImage>
 #include <QMainWindow>
@@ -12,7 +12,6 @@ namespace Ui {
 class MainWindow;
 }
 
-namespace s21 {
 class MainWindow : public QMainWindow, public Observer {
   Q_OBJECT
 
@@ -47,5 +46,4 @@ class MainWindow : public QMainWindow, public Observer {
   void NotifyPhotoFiltered(QImage const &img) final;
 };
 
-}  // namespace s21
-#endif  // CPP8_SRC_VIEW_MAIN_WINDOW_H_
+#endif  // SRC_VIEW_MAIN_WINDOW_H_

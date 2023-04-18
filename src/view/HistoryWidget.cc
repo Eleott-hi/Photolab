@@ -3,8 +3,6 @@
 #include <QGraphicsBlurEffect>
 #include <cassert>
 
-namespace s21 {
-
 HistoryWidget::HistoryWidget(QWidget *parent) : QScrollArea(parent) {
   setWidgetResizable(true);
 
@@ -91,5 +89,3 @@ void HistoryWidget::RemoveItemsAfter(QLabel *label) {
   while (Count() && layout_->itemAt(Count() - 1)->widget() != label)
     RemoveLast();
 }
-
-}  // namespace s21

@@ -1,9 +1,7 @@
-#ifndef CPP8_SRC_COMMON_OBSERVER_H_
-#define CPP8_SRC_COMMON_OBSERVER_H_
+#ifndef SRC_COMMON_OBSERVER_H_
+#define SRC_COMMON_OBSERVER_H_
 
 #include <QImage>
-
-namespace s21 {
 
 class Observer {
  public:
@@ -11,6 +9,4 @@ class Observer {
   virtual void NotifyPhotoPreview(QImage const &img) = 0;
 };
 
-}  // namespace s21
-
-#endif  // CPP8_SRC_COMMON_OBSERVER_H_
+#endif  // SRC_COMMON_OBSERVER_H_

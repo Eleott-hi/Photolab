@@ -1,5 +1,5 @@
-#ifndef CPP8_SRC_MODEL_MODEL_H_
-#define CPP8_SRC_MODEL_MODEL_H_
+#ifndef SRC_MODEL_MODEL_H_
+#define SRC_MODEL_MODEL_H_
 
 #include <QImage>
 #include <functional>
@@ -8,7 +8,6 @@
 #include "Filter.h"
 #include "Observable.h"
 
-namespace s21 {
 class Model : public Observable {
  public:
   Model() = default;
@@ -40,6 +39,5 @@ class Model : public Observable {
       {FilterName::SobelRight, Filter::SobelRight},
       {FilterName::GaussianBlur, Filter::GaussianBlur}};
 };
-}  // namespace s21
 
-#endif  // CPP8_SRC_MODEL_MODEL_H_
+#endif  // SRC_MODEL_MODEL_H_

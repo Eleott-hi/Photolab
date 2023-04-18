@@ -1,12 +1,10 @@
-#ifndef CPP8_SRC_MODEL_FILTER_H_
-#define CPP8_SRC_MODEL_FILTER_H_
+#ifndef SRC_MODEL_FILTER_H_
+#define SRC_MODEL_FILTER_H_
 #include <QImage>
 #include <QPainter>
 #include <memory>
 
 #include "Matrix.h"
-
-namespace s21 {
 
 enum class FilterName {
   Emboss,
@@ -60,6 +58,4 @@ class Filter {
                      double &cmax, double &cmin, double &delta);
 };
 
-}  // namespace s21
-
-#endif  // CPP8_SRC_MODEL_FILTER_H_
+#endif  // SRC_MODEL_FILTER_H_

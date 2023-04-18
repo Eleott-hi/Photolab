@@ -369,7 +369,7 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
-       <widget class="s21::CustomLabel" name="labelImage">
+       <widget class="CustomLabel" name="labelImage">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
           <horstretch>1</horstretch>
@@ -397,7 +397,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
          <item>
-          <widget class="s21::HistoryWidget" name="sa_History">
+          <widget class="HistoryWidget" name="sa_History">
            <property name="widgetResizable">
             <bool>true</bool>
            </property>
@@ -472,13 +472,13 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>s21::HistoryWidget</class>
+   <class>HistoryWidget</class>
    <extends>QScrollArea</extends>
    <header>HistoryWidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>s21::CustomLabel</class>
+   <class>CustomLabel</class>
    <extends>QLabel</extends>
    <header>CustomLabel.h</header>
   </customwidget>

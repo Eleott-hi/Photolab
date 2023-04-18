@@ -1,10 +1,9 @@
-#ifndef CPP8_SRC_VIEW_CUSTOM_SPIN_BOX_H_
-#define CPP8_SRC_VIEW_CUSTOM_SPIN_BOX_H_
+#ifndef SRC_VIEW_CUSTOM_SPIN_BOX_H_
+#define SRC_VIEW_CUSTOM_SPIN_BOX_H_
 
 #include <QKeyEvent>
 #include <QSpinBox>
 
-namespace s21 {
 class CustomSpinBox : public QSpinBox {
  public:
   CustomSpinBox(CustomSpinBox &&) = delete;
@@ -19,6 +18,4 @@ class CustomSpinBox : public QSpinBox {
   virtual void keyPressEvent(QKeyEvent *event) override { event->ignore(); }
 };
 
-}  // namespace s21
-
-#endif  // CPP8_SRC_VIEW_CUSTOM_SPIN_BOX_H_
+#endif  // SRC_VIEW_CUSTOM_SPIN_BOX_H_

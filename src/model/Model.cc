@@ -1,7 +1,5 @@
 #include "Model.h"
 
-namespace s21 {
-
 void Model::Filter(QImage const &img, FilterName filter) {
   if (auto itr = filters_.find(filter); itr != filters_.end())
     NotifyPhotoFiltered(itr->second(img));
@@ -30,5 +28,3 @@ void Model::HSV(QImage const &img, int hue, int saturation, int value) {
 void Model::HSL(QImage const &img, int hue, int saturation, int light) {
   NotifyPhotoPreview(Filter::HSL(img, hue, saturation, light));
 }
-
-}  // namespace s21

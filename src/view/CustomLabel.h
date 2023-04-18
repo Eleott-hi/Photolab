@@ -1,9 +1,8 @@
-#ifndef CPP8_SRC_VIEW_CUSTOM_LABEL_H_
-#define CPP8_SRC_VIEW_CUSTOM_LABEL_H_
+#ifndef SRC_VIEW_CUSTOM_LABEL_H_
+#define SRC_VIEW_CUSTOM_LABEL_H_
 
 #include <QLabel>
 
-namespace s21 {
 class CustomLabel : public QLabel {
   Q_OBJECT
  public:
@@ -21,6 +20,4 @@ class CustomLabel : public QLabel {
   void mousePressEvent(QMouseEvent *event) override;
 };
 
-}  // namespace s21
-
-#endif  // CPP8_SRC_VIEW_CUSTOM_LABEL_H_
+#endif  // SRC_VIEW_CUSTOM_LABEL_H_

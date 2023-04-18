@@ -1,11 +1,9 @@
-#ifndef CPP8_SRC_COMMON_MATRIX_H_
-#define CPP8_SRC_COMMON_MATRIX_H_
+#ifndef SRC_COMMON_MATRIX_H_
+#define SRC_COMMON_MATRIX_H_
 
 #include <fstream>
 #include <iostream>
 #include <vector>
-
-namespace s21 {
 
 template <typename T>
 class Matrix {
@@ -92,6 +90,4 @@ class Matrix {
   int cols_ = 0, rows_ = 0;
 };
 
-}  // namespace s21
-
-#endif  // CPP8_SRC_COMMON_MATRIX_H_
+#endif  // SRC_COMMON_MATRIX_H_

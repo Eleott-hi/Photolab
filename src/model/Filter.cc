@@ -2,8 +2,6 @@
 
 #include <cmath>
 
-namespace s21 {
-
 QImage Filter::Negative(QImage const &img) {
   QImage res(img.size(), img.format());
 
@@ -293,5 +291,3 @@ int Filter::CalcHue(QRgb const &color,  //
   if (cmax == g) return qRound(60 * ((b - r) / delta + 2));
   return qRound(60 * ((r - g) / delta + 4));
 }
-
-}  // namespace s21

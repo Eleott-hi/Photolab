@@ -1,5 +1,5 @@
-#ifndef CPP8_SRC_VIEW_CUSTOM_MATRIX_DIALOG_H_
-#define CPP8_SRC_VIEW_CUSTOM_MATRIX_DIALOG_H_
+#ifndef SRC_VIEW_CUSTOM_MATRIX_DIALOG_H_
+#define SRC_VIEW_CUSTOM_MATRIX_DIALOG_H_
 
 #include <QDialog>
 
@@ -8,8 +8,6 @@
 namespace Ui {
 class CustomMatrixDialog;
 }
-
-namespace s21 {
 
 class CustomMatrixDialog : public QDialog {
   Q_OBJECT
@@ -31,6 +29,4 @@ class CustomMatrixDialog : public QDialog {
   void SetTable();
 };
 
-}  // namespace s21
-
-#endif  // CPP8_SRC_VIEW_CUSTOM_MATRIX_DIALOG_H_
+#endif  // SRC_VIEW_CUSTOM_MATRIX_DIALOG_H_

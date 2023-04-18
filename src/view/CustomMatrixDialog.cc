@@ -2,8 +2,6 @@
 
 #include "ui_CustomMatrixDialog.h"
 
-namespace s21 {
-
 Matrix<double> CustomMatrixDialog::GetMatrix() {
   CustomMatrixDialog dialog;
 
@@ -58,5 +56,3 @@ Matrix<double> CustomMatrixDialog::ToMatrix() {
 
   return matrix;
 }
-
-}  // namespace s21

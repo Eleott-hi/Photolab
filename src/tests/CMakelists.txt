@@ -22,7 +22,7 @@ set(COVERAGE_EXTRACT_FILES "*Filter.cc")
 include_directories(../model/ ../common/)
 file(GLOB TEST_SOURCES "*.cc" "../model/Filter.cc")
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS ${QT_LIBS})
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS ${QT_LIBS})
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${QT_LIBS})
 
 include(FetchContent)

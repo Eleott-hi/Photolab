@@ -1,9 +1,7 @@
-#ifndef CPP8_SRC_CONTROLLER_H_
-#define CPP8_SRC_CONTROLLER_H_
+#ifndef SRC_CONTROLLER_H_
+#define SRC_CONTROLLER_H_
 
 #include "Model.h"
-
-namespace s21 {
 
 class Controller {
  public:
@@ -82,6 +80,4 @@ class Controller {
   Model* model_;
 };
 
-}  // namespace s21
-
-#endif  // CPP8_SRC_CONTROLLER_H_
+#endif  // SRC_CONTROLLER_H_

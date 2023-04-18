@@ -1,11 +1,9 @@
-#ifndef CPP8_SRC_VIEW_HISTORY_WIDGET_H_
-#define CPP8_SRC_VIEW_HISTORY_WIDGET_H_
+#ifndef SRC_VIEW_HISTORY_WIDGET_H_
+#define SRC_VIEW_HISTORY_WIDGET_H_
 
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QScrollArea>
-
-namespace s21 {
 
 class HistoryWidget : public QScrollArea {
   Q_OBJECT
@@ -33,6 +31,5 @@ class HistoryWidget : public QScrollArea {
 
   void RemoveWidget(size_t index);
 };
-}  // namespace s21
 
-#endif  // CPP8_SRC_VIEW_HISTORY_WIDGET_H_
+#endif  // SRC_VIEW_HISTORY_WIDGET_H_

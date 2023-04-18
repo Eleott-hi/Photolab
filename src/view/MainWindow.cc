@@ -12,8 +12,6 @@
 #include "CustomMatrixDialog.h"
 #include "ui_MainWindow.h"
 
-namespace s21 {
-
 void SetLabelPixmap(QLabel *label, QImage const &img) {
   if (!label) return;
 
@@ -214,5 +212,3 @@ void MainWindow::ConnectSignals() {
   connect(ui_->labelImage, &CustomLabel::mousePressEvent, this,
           &MainWindow::LabelSelected);
 }
-
-}  // namespace s21

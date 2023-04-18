@@ -2,7 +2,6 @@
 
 #include "Filter.h"
 
-using namespace s21;
 constexpr double error = 1e-1;
 
 TEST(Grayscale, test_1) {
