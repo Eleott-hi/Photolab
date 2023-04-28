@@ -131,3 +131,6 @@ You need to modify the PhotoLab v1.0 program to implement color correction algor
 - The interface for color correction of the original image should provide the ability to set brightness, contrast and the three parameters of the specified saturation model both numerically and by slider.
 
 💡 [Tap here](https://forms.yandex.ru/u/635a92f584227c1bd824b1b6/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
+
+
+![Photolab](misc/images/photolab.gif)
